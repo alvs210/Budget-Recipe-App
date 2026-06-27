@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eating on a Budget</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Munchin' on Money</h1>
+    <h3>Recipes on a budget, with whatever's in the fridge!</h3>
+  </header>
+
+  <main>
+
+    <!-- LEFT: Fridge Panel -->
+    <aside id="fridge-panel">
+      <h2>My Ingredients</h2>
+      <div class="ingredients">
+        <input type="text" class="ingredient-field" placeholder="e.g. salmon, garlic..." />
+        <button class="add-btn" id="add-btn">Add</button>
+
+      </div>
+      <h3>Current Ingredients</h3>
+      <p id="placeholder-text1">Add some ingredients! Check the fridge!.</p>
+      <ul id="ingredient-list"></ul>
+      <button id="search-btn">Search</button>
+    </aside>
+      <div id="center-panel">
+        
+        <p id="placeholder-text">Add ingredients to get some recipes.</p>
+
+        <section id="recipe-grid"></section>
+    </div>
+    
+      <hr />
+      <aside id="filter-panel">
+      <h3>Sort By</h3>
+      <select id="sort-select">
+        <option value="recommended">Recommended</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="time-asc">Prep Time: Shortest First</option>
+        <option value="time-desc">Prep Time: Longest First</option>
+    </select>
+        <h3>Diet</h3>
+        <div id="diet-options">
+          <button class="diet-filter-btn" data-value="vegetarian">Vegetarian</button>
+          <button class="diet-filter-btn" data-value="vegan">Vegan</button>
+          <button class="diet-filter-btn" data-value="gluten free">Gluten Free</button>
+          <button class="diet-filter-btn" data-value="ketogenic">Keto</button>
+          <button class="diet-filter-btn" data-value="paleo">Paleo</button>
+        </div>
+      
+        <h3>Intolerances</h3>
+        <div id="intol-options">
+          <button class="intol-filter-btn" data-value="dairy">Dairy</button>
+          <button class="intol-filter-btn" data-value="egg">Egg</button>
+          <button class="intol-filter-btn" data-value="gluten">Gluten</button>
+          <button class="intol-filter-btn" data-value="peanut">Peanut</button>
+          <button class="intol-filter-btn" data-value="shellfish">Shellfish</button>
+          <button class="intol-filter-btn" data-value="soy">Soy</button>
+          <button class="intol-filter-btn" data-value="tree nut">Tree Nut</button>
+        </div>
+
+        <div class="custom-wrapper">
+          <div class="range">
+              <h3 class="projtitle">Price Range</h3>
+          </div>
+<div class="price-input-container">
+    <div class="price-input">
+        <div class="price-field">
+            <span>Minimum Price</span>
+            <input type="number" class="min-input" value="0">
+        </div>
+        <div class="price-field">
+            <span>Maximum Price</span>
+            <input type="number" class="max-input" value="100">
+        </div>
+    </div>
+    <div class="slider">
+        <div class="price-slider"></div>
+    </div>
+    <div class="range-input">
+        <input type="range" class="min-price-display" min="0" max="100" value="0" step="1">
+        <input type="range" class="max-price-display" min="0" max="100" value="100" step="1">
+    </div>
+</div>   
+</div>
+    </aside>
+
+</section>
+      
+
+</main>
+
+  <!-- Recipe Modal -->
+  <div id="modal-overlay" class="hidden">
+    <div id="modal">
+      <button id="modal-close">✕</button>
+      <img id="modal-image" src="" alt="" />
+      <h2 id="modal-title"></h2>
+      <p id="modal-meta"></p>
+      <div id="modal-ingredients"></div>
+      <div id="modal-instructions"></div>
+      <!-- <button id="modal-add-to-cart">Add missing to cart</button> -->
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="components/spoon.js"></script>
+  <script src="render.js"></script>
+  <!-- the order of this stuff matters!! -->
+  <script src="app.js" defer></script>
+
+</body>
+</html>

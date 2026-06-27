@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Munchin' on Money</h1>
+    <a href="index.html">← Keep Searching</a>
+  </header>
+
+  <main class="recipe-detail">
+
+    <h1 class="detail-title"></h1>
+
+    <img class="detail-image" src="" alt="" />
+
+    <div class="summary-grid">
+        <div class="summary-block">
+            <h2>You Have</h2>
+            <ul id="have-list"></ul>
+        </div>
+        <div class="summary-block">
+            <h2>You Need</h2>
+            <ul id="need-list"></ul>
+        </div>
+        <div class="summary-block">
+            <h2>Price Breakdown</h2>
+            <p class="missing-cost"></p>
+            <div class="price-widget"></div>
+        </div>
+    </div>
+
+    <div class="summary-block">
+        <h2>Equipment</h2>
+        <ul id="equipment-list"></ul>
+    </div>
+
+    <div class="detail-instructions"></div>
+
+</main>
+
+  <script src="config.js"></script>
+  <script src="components/spoon.js"></script>
+  <script src="render.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>

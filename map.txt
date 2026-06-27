@@ -1,0 +1,6 @@
+1- User picks a topic
+2- Wikipedia API is called
+3- Text is cleaned, process, key facts are extracted
+4- LLM API is called
+5- Several options for test/quiz generation
+6- Score, feedback, etc.
