@@ -2,7 +2,7 @@
 // url = "https://api.spoonacular.com/recipes/complexSearch?query=pasta&maxFat=25&number=2"
 //const apiUrl = `https://api.spoonacular.com/recipes/complexSearch?query=${encodeURIComponent(query)}&number=5&addRecipeNutrition=true&apiKey=${apiKey}`;
 
-const myKey = import.meta.env.API_KEY; 
+// const myKey = import.meta.env.VITE_API_KEY; 
 
 async function getRecipes(items, intol = "", diet = "", number = 50) {
     console.log(items)
@@ -17,6 +17,7 @@ async function getRecipes(items, intol = "", diet = "", number = 50) {
         return data.results
     }
     catch (error) {
+        console.log(myKey)
         console.log(error)
     }
 }
