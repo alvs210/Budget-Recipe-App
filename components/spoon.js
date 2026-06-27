@@ -4,12 +4,12 @@
 
 
 
-async function getRecipes(items, intol = "", diet = "", number = 12) {
+async function getRecipes(items, intol = "", diet = "", number = 50) {
     console.log(items)
     console.log("fired getRecipes")
     try {
         const response = await fetch(
-            `https://api.spoonacular.com/recipes/complexSearch?includeIngredients=${items}&number=${number}&intolerances=${intol}&diet=${diet}&addRecipeInformation=true&apiKey=${myKey}`
+            `https://api.spoonacular.com/recipes/complexSearch?includeIngredients=${items}&ranking=2&number=${number}&intolerances=${intol}&diet=${diet}&addRecipeInformation=true&apiKey=${myKey}`
         )
         console.log(response.status)
         if (!response.ok) throw new Error(`HTTP Error! ${response.status}`)
@@ -55,7 +55,7 @@ async function getRecipePriceWidget(recipe) {
 
         const html = await response.text()
         //always put how you must process the response
-        console.log(html)
+        // console.log(html)
         return html
     }
 

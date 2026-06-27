@@ -48,6 +48,7 @@ function renderIngredientList() {
         removeBtn.textContent = '✕'
         removeBtn.addEventListener('click', () => {
             appState.ingredientInput.splice(index, 1)
+            updateStateAndSave()
             renderIngredientList()
         })
         li.appendChild(removeBtn)
@@ -58,6 +59,7 @@ function renderIngredientList() {
 //renders stuff and sends over to recipe.HTML
 
 async function renderRecipeInstructions(recipe) {
+    console.log('ingredientInput:', appState.ingredientInput)
 
     const div = document.querySelector('.detail-instructions');
     document.querySelector('.detail-title').textContent = recipe.title
@@ -104,6 +106,7 @@ async function renderRecipeInstructions(recipe) {
             // console.log(ing.price.split(" ")[0])
         }
     })
+    console.log('recipeIngredients:', [...recipeIngredients])
 
     recipeEquipment.forEach(eq => {
         const li = document.createElement('li')

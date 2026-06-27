@@ -114,7 +114,7 @@ document.getElementById('search-btn')?.addEventListener('click', async () => {
     const items = appState.ingredientInput.join(',')
     // const number = document.getElementById('result-limit').value
     const data = await getRecipes(items, appState.selectedIntol.join(','), appState.selectedDiet.join(','), 20)
-    console.log(data)
+    // console.log(data)
     lastResults = data
     localStorage.setItem('lastResults', JSON.stringify(data))
     document.getElementById('sort-select').value = 'recommended'
@@ -263,7 +263,7 @@ async function loadRecipe() {
 
     console.log("Recipe ID:", recipeId)
     const currentRecipe = await getRecipeDetails(recipeId)
-    console.log(currentRecipe)
+    // console.log(currentRecipe)
     const data = await getRecipeInstructions(currentRecipe)
     renderRecipeInstructions(currentRecipe)
     const widgetHtml = await getRecipePriceWidget(currentRecipe);
