@@ -274,3 +274,4 @@ async function loadRecipe() {
 if (window.location.pathname.includes('recipe.html')) {
     loadRecipe()
 }
+
