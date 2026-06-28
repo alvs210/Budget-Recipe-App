@@ -1,5 +1,5 @@
 
-const myKey = "24e3158a6ae5431aa3737f31b557f637"
+// const myKey = "24e3158a6ae5431aa3737f31b557f637"
  
 
 async function getRecipes(items, intol = "", diet = "", number = 50) {
