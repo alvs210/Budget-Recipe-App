@@ -1,26 +1,6 @@
-// const myKey = "f125c7ffef3644c3900b24fb2de89931"
-// url = "https://api.spoonacular.com/recipes/complexSearch?query=pasta&maxFat=25&number=2"
-//const apiUrl = `https://api.spoonacular.com/recipes/complexSearch?query=${encodeURIComponent(query)}&number=5&addRecipeNutrition=true&apiKey=${apiKey}`;
 
-// const isLocal = ['localhost', '127.0.0.1'].includes(window.location.hostname)
 const myKey = "24e3158a6ae5431aa3737f31b557f637"
-// if (!isLocal) {
-//     const _fetch = window.fetch.bind(window)
-//     window.fetch = function(url, options) {
-//         if (typeof url === 'string' && url.includes('api.spoonacular.com')) {
-//             const u = new URL(url)
-//             u.searchParams.delete('apiKey')
-//             const path = u.pathname.slice(1)
-//             const params = new URLSearchParams({ path })
-//             u.searchParams.forEach((v, k) => params.set(k, v))
-//             return _fetch(`/api/proxy?${params}`, options)
-//         }
-//         return _fetch(url, options)
-//     }
-// }
-
-
-// const myKey = process.env.myKey; 
+ 
 
 async function getRecipes(items, intol = "", diet = "", number = 50) {
     console.log(items)
